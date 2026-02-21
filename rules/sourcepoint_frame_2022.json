@@ -48,24 +48,51 @@
             },
             {
                 "action": {
-                    "type": "list",
-                    "actions": [
-                        {
-                            "type": "ifcss",
-                            "target": {
-                                "selector": "button.message-button",
-                                "textFilter": [
-                                    "Manage Cookies",
-                                    "Customize",
-                                    "Konfigurieren",
-                                    "Asetukset",
-                                    "Learn More",
-                                    "Instellingen beheren",
-                                    "GESTIRE LE IMPOSTAZIONI"
-                                ]
-                            },
-                            "trueAction": {
-                                "type": "click",
+                    "type": "ifcss",
+                    "target": {
+                        "selector": "button[class*=\"sp_choice\"], button.message-button, .message-component button",
+                        "textFilter": [
+                            "Alle akzeptieren",
+                            "Accept all",
+                            "Tout accepter",
+                            "Accetta tutto",
+                            "Aceptar todo",
+                            "Alles accepteren",
+                            "Zustimmen und weiter",
+                            "Consent and continue",
+                            "Accepter et continuer",
+                            "Accetta e continua",
+                            "Mit Werbung weiterlesen",
+                            "Weiter mit Werbung",
+                            "Mit Werbung"
+                        ]
+                    },
+                    "trueAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": "button[class*=\"sp_choice\"], button.message-button, .message-component button",
+                            "textFilter": [
+                                "Alle akzeptieren",
+                                "Accept all",
+                                "Tout accepter",
+                                "Accetta tutto",
+                                "Aceptar todo",
+                                "Alles accepteren",
+                                "Zustimmen und weiter",
+                                "Consent and continue",
+                                "Accepter et continuer",
+                                "Accetta e continua",
+                                "Mit Werbung weiterlesen",
+                                "Weiter mit Werbung",
+                                "Mit Werbung"
+                            ]
+                        }
+                    },
+                    "falseAction": {
+                        "type": "list",
+                        "actions": [
+                            {
+                                "type": "ifcss",
                                 "target": {
                                     "selector": "button.message-button",
                                     "textFilter": [
@@ -77,28 +104,43 @@
                                         "Instellingen beheren",
                                         "GESTIRE LE IMPOSTAZIONI"
                                     ]
+                                },
+                                "trueAction": {
+                                    "type": "click",
+                                    "target": {
+                                        "selector": "button.message-button",
+                                        "textFilter": [
+                                            "Manage Cookies",
+                                            "Customize",
+                                            "Konfigurieren",
+                                            "Asetukset",
+                                            "Learn More",
+                                            "Instellingen beheren",
+                                            "GESTIRE LE IMPOSTAZIONI"
+                                        ]
+                                    }
                                 }
-                            }
-                        },
-                        {
-                            "type": "ifcss",
-                            "target": {
-                                "selector": "p.message-component a",
-                                "textFilter": [
-                                    "Einstellungen anpassen"
-                                ]
                             },
-                            "trueAction": {
-                                "type": "click",
+                            {
+                                "type": "ifcss",
                                 "target": {
                                     "selector": "p.message-component a",
                                     "textFilter": [
                                         "Einstellungen anpassen"
                                     ]
+                                },
+                                "trueAction": {
+                                    "type": "click",
+                                    "target": {
+                                        "selector": "p.message-component a",
+                                        "textFilter": [
+                                            "Einstellungen anpassen"
+                                        ]
+                                    }
                                 }
                             }
-                        }
-                    ]
+                        ]
+                    }
                 },
                 "name": "OPEN_OPTIONS"
             },
@@ -218,9 +260,85 @@
             },
             {
                 "action": {
-                    "type": "click",
+                    "type": "ifcss",
                     "target": {
                         "selector": "button.sp_choice_type_SAVE_AND_EXIT"
+                    },
+                    "trueAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": "button.sp_choice_type_SAVE_AND_EXIT"
+                        }
+                    },
+                    "falseAction": {
+                        "type": "ifcss",
+                        "target": {
+                            "selector": "button[class*=\"sp_choice\"], button.message-button, .message-component button, .pm-content button",
+                            "textFilter": [
+                                "Alle akzeptieren",
+                                "Accept all",
+                                "Tout accepter",
+                                "Accetta tutto",
+                                "Aceptar todo",
+                                "Alles accepteren",
+                                "Auswahl speichern",
+                                "Save and exit",
+                                "Enregistrer et quitter",
+                                "Salva ed esci",
+                                "Guardar y salir",
+                                "Zustimmen und weiter",
+                                "Consent and continue",
+                                "Akzeptieren",
+                                "Accept",
+                                "Accepter",
+                                "Accetta",
+                                "Aceptar",
+                                "Einwilligen",
+                                "Einverstanden",
+                                "Alle zulassen",
+                                "Mit Werbung",
+                                "Weiter mit Werbung",
+                                "Mit Werbung weiterlesen"
+                            ]
+                        },
+                        "trueAction": {
+                            "type": "click",
+                            "target": {
+                                "selector": "button[class*=\"sp_choice\"], button.message-button, .message-component button, .pm-content button",
+                                "textFilter": [
+                                    "Alle akzeptieren",
+                                    "Accept all",
+                                    "Tout accepter",
+                                    "Accetta tutto",
+                                    "Aceptar todo",
+                                    "Alles accepteren",
+                                    "Auswahl speichern",
+                                    "Save and exit",
+                                    "Enregistrer et quitter",
+                                    "Salva ed esci",
+                                    "Guardar y salir",
+                                    "Zustimmen und weiter",
+                                    "Consent and continue",
+                                    "Akzeptieren",
+                                    "Accept",
+                                    "Accepter",
+                                    "Accetta",
+                                    "Aceptar",
+                                    "Einwilligen",
+                                    "Einverstanden",
+                                    "Alle zulassen",
+                                    "Mit Werbung",
+                                    "Weiter mit Werbung",
+                                    "Mit Werbung weiterlesen"
+                                ]
+                            }
+                        },
+                        "falseAction": {
+                            "type": "click",
+                            "target": {
+                                "selector": "button[class*=\"sp_choice\"], button.message-button, .message-component button, .message-column button"
+                            }
+                        }
                     }
                 },
                 "name": "SAVE_CONSENT"
@@ -381,7 +499,7 @@
                                                 "Informatie op een apparaat opslaan en/of openen",
                                                 "Archiviare e/o accedere a informazioni su un dispositivo",
                                                 "Utilizzare dati di geolocalizzazione precisi",
-                                                "Scansione attiva delle caratteristiche del dispositivo ai fini dell’identificazione"
+                                                "Scansione attiva delle caratteristiche del dispositivo ai fini dell\u2019identificazione"
                                             ]
                                         },
                                         "trueAction": {
@@ -513,7 +631,7 @@
                                                 "Marketing-cookies",
                                                 "Cookies brugt af reklamepartnere (IAB)",
                                                 "Marketing",
-                                                "Annunci basici, profilo di annunci personalizzati e valutazione dell’annuncio",
+                                                "Annunci basici, profilo di annunci personalizzati e valutazione dell\u2019annuncio",
                                                 "Selezionare annunci personalizzati"
                                             ]
                                         },
@@ -1013,7 +1131,7 @@
                                         "target": {
                                             "selector": ".accordion",
                                             "textFilter": [
-                                                "Datenübermittlung an Partner in den USA"
+                                                "Daten\u00fcbermittlung an Partner in den USA"
                                             ]
                                         },
                                         "trueAction": {
